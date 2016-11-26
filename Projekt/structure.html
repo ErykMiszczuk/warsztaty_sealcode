@@ -8,7 +8,7 @@
     <header>
       <h1>Zadania</h1>
       <p>Zbiór zadań do wykonania</p>
-    </heaader>
+    </header>
     <main>
       <!--Lista wszystkich zadań podzielona na kategorie (później zostaną dodane do niej linki tak aby łatwiej bylo znaleźć poszczególne zadania) -->
       <nav>
@@ -39,19 +39,19 @@
         <fieldset>
           <legend>Dodaj zadanie</legend>
           <div>
-            Tytoł<input type="text" placeholder="Miłe złego początki.">
+            <label for="quest_name">Tytuł</label><input id="form_quest_name" type="text" placeholder="Miłe złego początki.">
           </div>
           <div>
-            Kategoria
-            <select>
+            <label for="form_quest_category">Kategoria</label>
+            <select id="form_quest_category">
               <option>Główne</option>
               <option>Poboczne</option>
               <option>Zlecenia</option>
             </select>
           </div>
           <div>
-            Treść
-            <textarea placeholder="Powinienem wybić szczury z tej piwnicy">
+            <label for="form_quest_detail">Treść</label>
+            <textarea id="form_quest_detail" placeholder="Powinienem wybić szczury z tej piwnicy">
             </textarea>
           </div>
           <div>
