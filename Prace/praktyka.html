@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style media="screen">
+      html {
+        background-color: rgb(70, 204, 222);
+      }
+      #main ul {
+        display: inline-block;
+      }
+      #main ul li {
+        display: inline-block;
+      }
+      .right {
+        position: absolute;
+        right: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 960px;
+        margin: 0 auto;
+      }
+      .glass {
+        position: relative;
+        width: 180px;
+        height: 320px;
+        margin: 0 auto;
+        border: 4px solid white;
+      }
+      .juice {
+        position: absolute;
+        background-color: orange;
+        width: 180px;
+        height: 300px;
+      }
+      .juice:hover {
+        position: absolute;
+        background-color: red;
+        width: 180px;
+        height: 300px;
+        animation: anim 6s ease;
+      }
+      @keyframes anim {
+        from {
+          height: 300px;
+        }
+        to {
+          height: 10px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav id="main">
+      <div class="container">
+        <ul class="left">
+          <li>Carrot juice lovers</li>
+        </ul>
+        <ul class="right">
+          <li>Home</li>
+          <li>About</li>
+          <li>Carrots</li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="glass">
+        <div class="juice">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
