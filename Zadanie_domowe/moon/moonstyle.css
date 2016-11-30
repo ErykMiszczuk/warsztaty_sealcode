@@ -1,0 +1,81 @@
+@keyframes moonmoon {
+  0% {
+    top: 200px;
+    left: 4px;
+  }
+  20% {
+    top: 140px;
+    left: 200px;
+  }
+  30% {
+    top: 50px;
+    left: 400px;
+  }
+  40% {
+    top: 4px;
+    left: 500px;
+  }
+  65% {
+    top: 50px;
+    left: 600px;
+  }
+  60% {
+    top: 140px;
+    left: 800px;
+  }
+  70% {
+    top: 200px;
+    left: 1000px;
+  }
+  80% {
+    top: 200px;
+    left: 800px;
+  }
+  90% {
+    top: 50px;
+    left: 600px;
+  }
+  93% {
+    top: 63px;
+    left: 40px;
+  }
+  98% {
+    top: 63px;
+    left: 40px;
+  }
+  100% {
+    top: 50px;
+    left: 600px;
+  }
+}
+
+html {
+  background-color: black;
+}
+.move {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation-name: moonmoon;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+.light {
+	width: 100px;
+	height: 100px;
+	background-color: whitesmoke;
+	position: absolute;
+	top: 16px;
+	left: 0px;
+	border-radius: 50px;
+	box-shadow: -4px 4px 8px rgba(250, 210, 124, 0.5);
+}
+.dark {
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	position: absolute;
+	top: 0px;
+	left: 36px;
+	border-radius: 50px;
+}
