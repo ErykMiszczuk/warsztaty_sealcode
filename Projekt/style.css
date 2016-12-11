@@ -29,6 +29,7 @@ html, body {
   padding-top: 0.5em;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
 }
 .main_quests_list {
 	list-style-type: none;
@@ -54,6 +55,7 @@ html, body {
   padding-top: 0.5em;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
 }
 .add_quest fieldset {
 	margin-right: 0px;
@@ -139,4 +141,21 @@ html, body {
 .main_quests_categories_links {
   font-size: 1rem;
   font-weight: normal;
+  border-left: 0.1em solid whitesmoke;
+}
+.main_quests_categories_links li:hover {
+  transition: all 0.2s linear;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.cat_main {
+  border-left: 0.2em solid rgb(177, 21, 21);
+}
+.cat_targets {
+  border-left: 0.2em solid rgb(81, 184, 39);
+}
+.cat_others {
+  border-left: 0.2em solid rgb(47, 69, 190);
+}
+.cat_temp {
+  border-left: 0.2em solid rgb(227, 150, 19);
 }
