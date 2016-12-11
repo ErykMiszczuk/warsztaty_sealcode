@@ -15,23 +15,23 @@
       <!--Lista wszystkich zadań podzielona na kategorie (później zostaną dodane do niej linki tak aby łatwiej bylo znaleźć poszczególne zadania) -->
       <div class="main_quests_panel_left">
       <nav>
-        <ul class="main_quests_links">
-          <li>Główne
-            <ol>
+        <ul class="main_quests_list">
+          <li class="main_quests_categories">Główne
+            <ol class="main_quests_categories_links">
               <li>Przynieść Gnarowi 10 wilczych skór</li>
               <li>Umarł król, niech żyje król</li>
               <li>Uwolnij Gothę od klątwy</li>
               <li>Piwo dla ekipy</li>
             </ol>
           </li>
-          <li>Poboczne
-            <ol>
+          <li class="main_quests_categories">Poboczne
+            <ol class="main_quests_categories_links">
               <li>Mięso dla ekipy</li>
               <li>Odszukaj Arkę Przymierza</li>
             </ol>
           </li>
-          <li>Zlecenia
-            <ol>
+          <li class="main_quests_categories">Zlecenia
+            <ol class="main_quests_categories_links">
               <li>Zlecenie na Widmaka</li>
             </ol>
           </li>
@@ -42,7 +42,7 @@
         <fieldset>
           <legend>Dodaj zadanie</legend>
           <div class="rhytmfix">
-            <label for="quest_name">Tytuł</label><input id="form_quest_name" type="text" placeholder="Miłe złego początki.">
+            <label for="form_quest_name">Tytuł</label><input id="form_quest_name" type="text" placeholder="Miłe złego początki.">
           </div>
           <div>
             <label for="form_quest_category">Kategoria</label>
@@ -56,7 +56,7 @@
             <label for="form_quest_detail">Treść</label>
             <textarea id="form_quest_detail" placeholder="Powinienem wybić szczury z tej piwnicy"></textarea>
           </div>
-          <div>
+          <div class="form_quest_controls">
             <button>Dodaj do listy</button>
             <button>Anuluj</button>
           </div>
