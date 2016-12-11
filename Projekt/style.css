@@ -145,7 +145,7 @@ html, body {
 }
 .main_quests_categories_links li:hover {
   transition: all 0.2s linear;
-  background-color: rgba(255, 255, 255, 0.25);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.2) 100%);
 }
 .cat_main {
   border-left: 0.2em solid rgb(177, 21, 21);
@@ -158,4 +158,35 @@ html, body {
 }
 .cat_temp {
   border-left: 0.2em solid rgb(227, 150, 19);
+}
+button {
+  color: whitesmoke;
+	background: rgba(255, 255, 255, 0.2);
+	border: 0.2em solid whitesmoke;
+}
+.btn_danger {
+  text-transform: uppercase;
+  border: 0.2em solid rgba(255, 0, 0, 1);
+  background: rgba(255, 0, 0, 0.65);
+}
+.btn_danger:hover {
+  transition-property: background 0.2s linear;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 0, 0, 0.65) 100%);
+  /*border-bottom: 1px solid rgba(255, 0, 0, 0.65);*/
+}
+.btn_accept {
+  text-transform: uppercase;
+  border: 0.2em solid rgba(25, 250, 5, 1);
+  background: rgba(25, 250, 5, 0.65)
+}
+.btn_accept:hover {
+  transition-property: background 0.2s linear;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.7) 0%, rgba(25, 250, 5, 0.65) 100%);
+  /*border-bottom: 1px solid rgba(25, 250, 5, 0.65);*/
+}
+.btn_temp {
+  text-transform: uppercase;
+  transition-property: background 0.2s linear;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.15) 100%);
+  border-bottom:  1px solid rgba(25, 250, 5, 0.65);
 }
