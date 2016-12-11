@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Transition</title>
+    <style>
+    html {
+      font-size: 62.5%;
+    }
+    /*
+    line-height = całkowite > font-size
+    font-size < line-height = nie musi by całkowity
+
+    basehold.it
+
+    */
+    .box {
+      width: 200px;
+      height: 200px;
+      background: #333;
+      /*transition: background 1s ease-in;*/
+      position: relative;
+      left: 0px;
+      transition: left 5s ease-in;
+    }
+    .box:hover {
+      /*background: aquamarine;*/
+      left: 400px;
+    }
+    p {
+      font-size: 1rem;
+      padding: 1em;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <p>aaa</p>
+  </body>
+</html>
