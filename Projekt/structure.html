@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Dziennik Zadań</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <h1>Zadania</h1>
       <p>Zbiór zadań do wykonania</p>
     </header>
-    <main>
+    <main class="main_quests">
       <!--Lista wszystkich zadań podzielona na kategorie (później zostaną dodane do niej linki tak aby łatwiej bylo znaleźć poszczególne zadania) -->
+      <div class="main_quests_panel_left">
       <nav>
-        <ul>
+        <ul class="main_quests_links">
           <li>Główne
             <ol>
               <li>Przynieść Gnarowi 10 wilczych skór</li>
@@ -35,7 +37,7 @@
         </ul>
       </nav>
       <!-- Pole umożliwiające dodanie nowego zadania i jednoczesne go zakwalifikowanie -->
-      <form>
+      <form class="add_quest">
         <fieldset>
           <legend>Dodaj zadanie</legend>
           <div>
@@ -51,8 +53,7 @@
           </div>
           <div>
             <label for="form_quest_detail">Treść</label>
-            <textarea id="form_quest_detail" placeholder="Powinienem wybić szczury z tej piwnicy">
-            </textarea>
+            <textarea id="form_quest_detail" placeholder="Powinienem wybić szczury z tej piwnicy"></textarea>
           </div>
           <div>
             <button>Dodaj do listy</button>
@@ -60,8 +61,9 @@
           </div>
         </fieldset>
       </form>
+    </div>
       <!-- Schemat wyglądu szczegółowej treści zadania wraz z opcjami jakie można wykonać na zadaniu -->
-      <ul>
+      <ul class="main_quests_details">
         <li>
           <header>
             <h1>Przynieść Gnarowi 10 wilczych skór</h1>
@@ -88,6 +90,24 @@
             <li>Idź z Dougiem na polowanie</li>
             <li>Zdobądź 5 kawałków mięsa</li>
             <li>Zanieś mieso Rachel</li>
+          </ul>
+          <footer>
+            <div>
+              <button>Edytuj Zadanie</button>
+              <button>Usuń Zadanie</button>
+              <button>Przenieś Zadanie</button>
+            </div>
+          </footer>
+        </li>
+        <li>
+          <header>
+            <h1>Zlecenie na Widmaka</h1>
+          </header>
+          <p>Pojawiło się zlecenie na grasującego nieopodal widmaka.</p>
+          <ul>
+            <li>Idź z Dougiem na polowanie</li>
+            <li>Znajdź leze widmaka</li>
+            <li>Zanieś dowod zabicia widmaka do sołtysa</li>
           </ul>
           <footer>
             <div>
