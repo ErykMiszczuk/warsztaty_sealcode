@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crazy Hamster</title>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #screen {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgb(81, 194, 230);
+      z-index: 10;
+    }
+    #grass {
+      width: 100vw;
+      height: 35vh;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(24, 172, 52);
+      z-index: 20;
+    }
+    #hamster {
+      width: 10vh;
+      height: 10vh;
+      position: absolute;
+      left: 5%;
+      bottom: 30vh;
+      background-image: url("hamster.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-clip: border-box;
+      background-size: cover;
+      background-attachment: fixed;
+      animation: 15s run linear infinite;
+      z-index: 40;
+
+    }
+    #hamster:hover {
+      background-color: rgba(255, 0, 0, 0.25);
+    }
+    #points {
+      font-size: 4rem;
+      font-family: monospace;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      background-color: rgba(0, 0, 0, 0.25);
+      z-index: 30;
+      border-radius: .5rem;
+    }
+
+    @keyframes run {
+      0% {
+        left: 5%;
+        transform: scale(-1, 1);
+      }
+
+      49% {
+        transform: scale(-1, 1);
+      }
+
+      50% {
+        left: 95%;
+        transform: scale(1, 1);
+      }
+
+      99% {
+        transform: scale(1, 1);
+      }
+
+      100% {
+        left: 5%;
+        transform: scale(-1, 1);
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div id="screen"></div>
+    <div id="grass"></div>
+    <div id="hamster"></div>
+    <div id="points"></div>
+    <script type="text/javascript">
+      var hamster = document.getElementById("hamster");
+      var points = document.getElementById("points");
+      var pt = 0;
+      hamster.addEventListener("click", function() {
+          pt = pt + 1;
+          console.log(pt);
+          points.innerHTML = pt;
+          if (pt == 5) {
+            alert("Złapano chomika!");
+            document.location.reload(true);
+          }
+      });
+    </script>
+  </body>
+</html>

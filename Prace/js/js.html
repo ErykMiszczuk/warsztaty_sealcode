@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript - Ćwiczenia</title>
+  </head>
+  <body>
+
+    <button type="button" name="button" id="bt">Wypisz coś</button>
+
+    <p id="par">Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+    <p>Jakiś taki tekst</p>
+
+    <div id="container">
+
+    </div>
+
+    <script type="text/javascript">
+    //zmienne
+    var zmienna = 4;
+    var zm2 = "Takietam";
+    //log
+    // console.log(zm2);
+    // console.error(zm2);
+    // console.log("qTest");
+
+    //alert("Uwaga");
+    //confirm,prompt
+
+    //modyfikacja DOM
+    //var paragraf = document.getElementById("par");
+    // var paragraf = document.querySelectorAll("p");
+    // console.log(paragraf);
+
+    var button = document.getElementById("bt");
+    button.addEventListener("click", function(){
+      console.log("Klik");
+    })
+
+    // function qwe(a, b){
+    //   //kod
+    // }
+    //
+    // var x = function(){
+    //   //kod
+    // }
+    // x();
+
+    //tablice
+    var table = [1,2,3,4,5];
+    var table1 = ["qwerty","asdfgh","zxcvb"];
+    var table2 = [1,2,3,4,5.4,6,7,"qwer","qwert","qwerty"];
+
+    //petle
+    // while (warunek) {
+    //   //kod
+    // }
+    // for(var i = 0; i < 10; i++) {
+    //   //kod
+    // }
+
+    // table.forEach(function(item){
+    //   console.log(item)
+    // });
+
+    // var obj = {
+    //   imie: "Beatka",
+    //   nazwisko: "Kowalska",
+    //   metoda: function(){
+    //     console.log("hejo");
+    //   }
+    // }
+    //obj.metoda();
+    //console.log(obj["imie"]);
+
+    // var tablica = [
+    //   {a:4},{a:5},{a:10}
+    // ]
+    //
+    // tablica.forEach(function(item){
+    //   console.log(item.a);
+    // })
+    //
+    // tablca.push({a:5});
+    var container = document.getElementById("container");
+
+    var paragraf = document.createElement("p");
+
+    container.appendChild(paragraf);
+
+
+
+    </script>
+
+  </body>
+</html>

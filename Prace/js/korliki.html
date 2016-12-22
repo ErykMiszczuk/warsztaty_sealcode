@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Korliki</title>
+    <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    }
+    #container div img{
+      width: 100px;
+      height: 120px;
+    }
+    </style>
+  </head>
+  <body>
+      <input type="text" id="bunnyname">
+      <button id="dodaj">Dodaj</button>
+      <div id="container"></div>
+
+    <script type="text/javascript">
+      var korliki = [{name: "Bugs"},{name: "Bun"},{name: "Jeff"}];
+      function render() {
+        korliki.forEach(function(item){
+          var container = document.querySelector("#container");
+          var box = document.createElement("div");
+          var img = document.createElement("img");
+          img.src = "rabbid.jpg";
+          var name = document.createElement("h2");
+          name.textContent = item.name;
+          box.appendChild(img);
+          box.appendChild(name);
+
+          container.appendChild(box);
+        })
+      }
+      render();
+      var button = document.getElementById("dodaj");
+      button.addEventListener("click", function(){
+        var bname = document.getElementById("bunnyname").value;
+        korliki.push({name: bname});
+        cclear();
+        render();
+      })
+      function cclear() {
+        var container = document.querySelector("#container");
+        container.innerHTML = "";
+      }
+
+    </script>
+  </body>
+</html>
