@@ -1,11 +1,18 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const path = require('path')
 
 // Zadania w zewnętrznym pliku - notacja z kropką i ukośnikiem obowiązkowe
 var todos = require('./todos.js')
 
 app.use(bodyParser.urlencoded({extended: true}))
+
+app.use('/', express.static(path.join(__dirname, 'public')))
+
+app.get('/', function(req, res) {
+  res.sendFile('index.html')
+})
 
 app.get('/api/todos', function(req, res) {
   res.status(200).send(todos)
