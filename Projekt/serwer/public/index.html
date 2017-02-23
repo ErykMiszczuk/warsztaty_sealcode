@@ -1,15 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
   <head>
     <meta charset="utf-8">
-    <title>Zadania</title>
-		<link rel="stylesheet" href="assets/css/master.css">
+    <title>Dziennik Zadań</title>
+    	<link rel="stylesheet" href="assets/css/master.css">
+      <script src="build/bundle.js" charset="utf-8"></script>
+    <!-- <link rel="stylesheet" href="http://basehold.it/24/255/0/0"> -->
   </head>
   <body>
-    <h1>Zadania</h1>
-		<div id="render"></div>
-		
-	<!--	<script src="assets/js/app.js"></script> -->
-<script src="build/bundle.js"></script>
+    <header class="logo">
+      <h1>Zadania</h1>
+      <p>Zbiór zadań do wykonania</p>
+    </header>
+    <main class="main_quests">
+      <!--Lista wszystkich zadań podzielona na kategorie (później zostaną dodane do niej linki tak aby łatwiej bylo znaleźć poszczególne zadania) -->
+      <div class="main_quests_panel_left">
+      <nav>
+        <ul class="main_quests_list">
+          <li class="main_quests_categories">Główne
+            <ol class="main_quests_categories_links cat_main">
+              <li>Przynieść Gnarowi 10 wilczych skór</li>
+            </ol>
+          </li>
+          <li class="main_quests_categories">Poboczne
+            <ol class="main_quests_categories_links cat_others">
+            </ol>
+          </li>
+          <li class="main_quests_categories">Zlecenia
+            <ol class="main_quests_categories_links cat_targets">
+              <li>Zlecenie na Widmaka</li>
+            </ol>
+          </li>
+        </ul>
+      </nav>
+      <!-- Pole umożliwiające dodanie nowego zadania i jednoczesne go zakwalifikowanie -->
+      <form class="add_quest top_space">
+        <fieldset>
+          <legend>Dodaj zadanie</legend>
+          <div class="rhytmfix">
+            <label for="form_quest_name">Tytuł</label><input id="form_quest_name" type="text" placeholder="Miłe złego początki.">
+          </div>
+          <div>
+            <label for="form_quest_category">Kategoria</label>
+            <select id="form_quest_category">
+              <option>Główne</option>
+              <option>Poboczne</option>
+              <option>Zlecenia</option>
+            </select>
+          </div>
+          <div>
+            <label for="form_quest_detail">Treść</label>
+            <textarea id="form_quest_detail" placeholder="Powinienem wybić szczury z tej piwnicy"></textarea>
+          </div>
+          <div class="form_quest_controls">
+            <button class="btn btn_accept">Dodaj do listy</button>
+            <button class="btn btn_danger">Anuluj</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+      <!-- Schemat wyglądu szczegółowej treści zadania wraz z opcjami jakie można wykonać na zadaniu -->
+      <ul class="main_quests_details">
+        <li class="quest_details_box">
+          <header>
+            <h1>Przynieść Gnarowi 10 wilczych skór</h1>
+          </header>
+          <p>Ork kolekcjonuje skóry i skupuje każde ilości. Chętnie kupi 10 skór</p>
+          <ul>
+            <li>Zdobądź 10 wilczych skór</li>
+            <li>Sprzedaj skory Gnarowi</li>
+          </ul>
+          <footer>
+            <div class="quest_details_options">
+              <button>Edytuj Zadanie</button>
+              <button>Usuń Zadanie</button>
+              <button>Przenieś Zadanie</button>
+            </div>
+          </footer>
+        </li>
+
+
+      </ul>
+    </main>
+    <!-- Stopka, z moim podpisem. -->
+    <footer class="credits">
+      <small>Wykonał Eryk Miszczuk</small>
+    </footer>
   </body>
 </html>
